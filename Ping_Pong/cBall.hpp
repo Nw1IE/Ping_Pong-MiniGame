@@ -6,66 +6,23 @@ enum eDir { STOP = 0, LEFT = 1, UPLEFT = 2, DOWNLEFT = 3, RIGHT = 4, UPRIGHT = 5
 class cBall
 {
 public:
-    cBall(int posX, int posY)
+    cBall(int posX, int posY) 
     {
         originalX = posX;
         originalY = posY;
         x = posX; y = posY;
         direction = STOP;
     }
-    void Reset()
-    {
-        x = originalX; y = originalY;
-        direction = STOP;
-    }
-    void changeDirection(eDir d)
-    {
-        direction = d;
-    }
-    void randomDirection()
-    {
-        direction = (eDir)((rand() % 6) + 1);
-    }
-    inline int getX() 
-    {
-        return x; 
-    }
-    inline int getY() 
-    {
-        return y; 
-    }
-    inline eDir getDirection() 
-    { 
-        return direction; 
-    }
-    void Move()
-    {
-        switch (direction)
-        {
-        case STOP:
-            break;
-        case LEFT:
-            x--;
-            break;
-        case RIGHT:
-            x++;
-            break;
-        case UPLEFT:
-            x--; y--;
-            break;
-        case DOWNLEFT:
-            x--; y++;
-            break;
-        case UPRIGHT:
-            x++; y--;
-            break;
-        case DOWNRIGHT:
-            x++; y++;
-            break;
-        default:
-            break;
-        }
-    }
+   
+    void Reset(); // респавн мячика
+    void changeDirection(eDir d); // изменения направления
+    void randomDirection(); // случайное направления
+    
+    inline int getX(); // точка вызова функции
+    
+    inline int getY(); // точка вызова функции
+    inline eDir getDirection() ;// точка вызова направленмя
+    void Move(); // движения
 
 private:
     int x, y;
