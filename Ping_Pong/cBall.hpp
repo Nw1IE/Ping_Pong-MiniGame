@@ -1,7 +1,7 @@
 #pragma once
 #include <random>
-enum eDir { STOP = 0, LEFT = 1, UPLEFT = 2, DOWNLEFT = 3, RIGHT = 4, UPRIGHT = 5, DOWNRIGHT = 6 };
 
+enum eDir { STOP = 0, LEFT = 1, UPLEFT = 2, DOWNLEFT = 3, RIGHT = 4, UPRIGHT = 5, DOWNRIGHT = 6 };
 
 class cBall
 {
@@ -11,12 +11,12 @@ public:
         originalX = posX;
         originalY = posY;
         x = posX; y = posY;
-        direction - STOP;
+        direction = STOP;
     }
     void Reset()
     {
         x = originalX; y = originalY;
-        direction - STOP;
+        direction = STOP;
     }
     void changeDirection(eDir d)
     {

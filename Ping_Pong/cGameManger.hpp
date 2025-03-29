@@ -4,6 +4,7 @@
 #include <iostream>
 #include <time.h>
 #include <conio.h>    
+
 class cGameManger
 {
 public:

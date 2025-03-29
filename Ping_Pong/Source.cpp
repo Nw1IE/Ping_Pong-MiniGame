@@ -7,3 +7,5 @@ int main()
     c.Run();
     return 0;
 }
+
+// IK левый, WS правый
