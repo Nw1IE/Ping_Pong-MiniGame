@@ -39,25 +39,25 @@ void cGameManger::Draw() // Карта
                 std::cout << "\xB2";
 
             if (ballx == j && bally == i)
-                std::cout << "O"; //ìÿ÷
+                std::cout << "O"; //ball
             else if (player1x == j && player1y == i)
-                std::cout << "\xDB"; //èãðîê1
+                std::cout << "\xDB"; //player1
             else if (player2x == j && player2y == i)
-                std::cout << "\xDB"; //èãðîê2
+                std::cout << "\xDB"; //player2
 
             else if (player1x == j && player1y + 1 == i)
-                std::cout << "\xDB"; //èãðîê1
+                std::cout << "\xDB"; //player1
             else if (player1x == j && player1y + 2 == i)
-                std::cout << "\xDB"; //èãðîê1
+                std::cout << "\xDB"; //player1
             else if (player1x == j && player1y + 3 == i)
-                std::cout << "\xDB"; //èãðîê1
+                std::cout << "\xDB"; ///player1
 
             else if (player2x == j && player2y + 1 == i)
-                std::cout << "\xDB"; //èãðîê1
+                std::cout << "\xDB"; //player1
             else if (player2x == j && player2y + 2 == i)
-                std::cout << "\xDB"; //èãðîê1
+                std::cout << "\xDB"; //player1
             else if (player2x == j && player2y + 3 == i)
-                std::cout << "\xDB"; //èãðîê1
+                std::cout << "\xDB"; //player1
             else
                 std::cout << " ";
 
@@ -118,28 +118,28 @@ void cGameManger::Logic() // логикарол
     int player1y = player1->getY();
     int player2y = player2->getY();
 
-    //ëåâîå âåñëî
+    //левое весло
     for (int i = 0; i < 4; i++)
         if (ballx == player1x + 1)
             if (bally == player1y + i)
                 ball->changeDirection((eDir)((rand() % 3) + 4));
 
-    //ïðàâîå âåñëî
+    //правое весло
     for (int i = 0; i < 4; i++)
         if (ballx == player2x - 1)
             if (bally == player2y + i)
                 ball->changeDirection((eDir)((rand() % 3) + 1));
 
-    //íèæíÿÿ ñòåíêà
+    //нижняя стенка
     if (bally == height - 1)
         ball->changeDirection(ball->getDirection() == DOWNRIGHT ? UPRIGHT : UPLEFT);
-    //âåðõíÿÿ ñòåíêà
+    //верхняя стенка
     if (bally == 0)
         ball->changeDirection(ball->getDirection() == UPRIGHT ? DOWNRIGHT : DOWNLEFT);
-    //ïðàâàÿ ñòåíà
+    //правая стена
     if (ballx == width - 1)
         ScoreUp(player1);
-    //ëåâàÿ ñòåíà
+    //левая стена
     if (ballx == 0)
         ScoreUp(player2);
 }

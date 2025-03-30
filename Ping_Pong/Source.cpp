@@ -3,8 +3,8 @@
 #include "cPaddle.hpp"
 int main()
 {
-    cGameManger c(20, 10);
-    c.Run();
+    cGameManger c(20, 10); // Карта и показ игроков, типа как бы управления
+    c.Run(); // все относиться к ускорению, к загрузке карты 
     return 0;
 }
 
