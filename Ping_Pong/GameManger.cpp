@@ -1,4 +1,5 @@
 ﻿#include "GameManger.hpp"
+#include <ctime>
 
 GameManger::~GameManger() // типа упр игры
 {
@@ -228,6 +229,24 @@ void GameManger::Logic() // логикарол
 
 }
 
+//void GameManger::Run() // ускорения
+//{
+//    double elapsed = 0;
+//    int begin, end;
+//    while (!quit)
+//    {
+//        begin = time(NULL);
+//        if (elapsed > 1.0 / fps)
+//        {
+//            Draw();
+//            Input();
+//            Logic();
+//            elapsed -= 1.0 / fps;
+//        }
+//        end = time(NULL);
+//        elapsed += double(end - begin) / 1000.0;
+//    }
+//}
 void GameManger::Run() // ускорения
 {
 

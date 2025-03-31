@@ -34,6 +34,7 @@ public:
 
 
 private:
+    int fps;
     int width, height;
     int score1, score2;
     char up1, down1, up2, down2;
