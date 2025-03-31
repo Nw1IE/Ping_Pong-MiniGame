@@ -1,9 +1,9 @@
-#include "cBall.hpp"
-#include "cGameManger.hpp"
-#include "cPaddle.hpp"
+#include "Ball.hpp"
+#include "GameManger.hpp"
+#include "Paddle.hpp"
 int main()
 {
-    cGameManger c(20, 10); // Карта и показ игроков, типа как бы управления
+    GameManger c(20, 10); // Карта и показ игроков, типа как бы управления
     c.Run(); // все относиться к ускорению, к загрузке карты 
     return 0;
 }

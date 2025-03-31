@@ -1,27 +1,27 @@
 #pragma once
 #include <random>
 
-enum eDir { STOP = 0, LEFT = 1, UPLEFT = 2, DOWNLEFT = 3, RIGHT = 4, UPRIGHT = 5, DOWNRIGHT = 6 };
+enum eDir { STOP = 0, LEFT = 1, UPLEFT = 2, DOWNLEFT = 3, RIGHT = 4, UPRIGHT = 5, DOWNRIGHT = 6 }; // нужно для считывания клавишь
 
-class cBall
+class Ball
 {
 public:
-    cBall(int posX, int posY) 
+    Ball(int posX, int posY)
     {
         originalX = posX;
         originalY = posY;
         x = posX; y = posY;
         direction = STOP;
     }
-   
+
     void Reset(); // респавн мячика
     void changeDirection(eDir d); // изменения направления
     void randomDirection(); // случайное направления
-    
-    inline int getX(); // точка вызова функции
-    
-    inline int getY(); // точка вызова функции
-    inline eDir getDirection() ;// точка вызова направленмя
+
+    int getX(); // точка вызова функции
+
+    int getY(); // точка вызова функции
+    eDir getDirection();// точка вызова направленмя
     void Move(); // движения
 
 private:

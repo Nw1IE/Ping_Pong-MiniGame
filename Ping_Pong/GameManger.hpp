@@ -1,14 +1,14 @@
 #pragma once
-#include "cPaddle.hpp"
-#include "cBall.hpp"
+#include "Paddle.hpp"
+#include "Ball.hpp"
 #include <iostream>
 #include <time.h>
 #include <conio.h>    
 
-class cGameManger
+class GameManger
 {
 public:
-    cGameManger(int w, int h)
+    GameManger(int w, int h)
     {
         srand(time(NULL));
         quit = false;
@@ -16,20 +16,20 @@ public:
         down1 = 's'; down2 = 'k';
         score1 = score2 = 0;
         width = w; height = h;
-        ball = new cBall(w / 2, h / 2);
-        player1 = new cPaddle(1, h / 2 - 3);
-        player2 = new cPaddle(w - 2, h / 2 - 3);
+        ball = new Ball(w / 2, h / 2);
+        player1 = new Paddle(1, h / 2 - 3);
+        player2 = new Paddle(w - 2, h / 2 - 3);
     }
-    ~cGameManger();
-    
-    void ScoreUp(cPaddle* player); // Повышение очков
-   
+    ~GameManger();
+
+    void ScoreUp(Paddle* player); // Повышение очков
+
     void Draw();// Карта
-   
+
     void Input(); // загрузка вход 
-     
+
     void Logic(); // логикарол
-    
+
     void Run();// ускорения
 
 
@@ -38,8 +38,8 @@ private:
     int score1, score2;
     char up1, down1, up2, down2;
     bool quit;
-    cBall* ball;
-    cPaddle* player1;
-    cPaddle* player2;
+    Ball* ball;
+    Paddle* player1;
+    Paddle* player2;
 };
 

@@ -127,15 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cBall.cpp" />
-    <ClCompile Include="cGameManger.cpp" />
-    <ClCompile Include="cPaddle.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="GameManger.cpp" />
+    <ClCompile Include="Paddle.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cBall.hpp" />
-    <ClInclude Include="cGameManger.hpp" />
-    <ClInclude Include="cPaddle.hpp" />
+    <ClInclude Include="Ball.hpp" />
+    <ClInclude Include="GameManger.hpp" />
+    <ClInclude Include="Paddle.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

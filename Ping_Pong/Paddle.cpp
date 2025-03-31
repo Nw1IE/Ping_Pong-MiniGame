@@ -1,4 +1,4 @@
-#include "cPaddle.hpp"
+#include "Paddle.hpp"
 
 // Ќ≈чего нет!!!!!!!!!!!!!!!!!!!!!!
 

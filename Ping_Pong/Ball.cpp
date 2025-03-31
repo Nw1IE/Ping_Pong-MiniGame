@@ -1,34 +1,34 @@
-#include "cBall.hpp"
+#include "Ball.hpp"
 
 //геттеры
-void cBall::Reset() // респавн мячика
+void Ball::Reset() // респавн мячика
 {
     x = originalX; y = originalY;
     direction = STOP;
 }
-void cBall::changeDirection(eDir d) // изменения направления
+void Ball::changeDirection(eDir d) // изменения направления
 {
     direction = d;
 }
-void cBall::randomDirection() // случайное направления
+void Ball::randomDirection() // случайное направления
 {
     direction = (eDir)((rand() % 6) + 1);
 }
 
 //сеттеры
-inline int cBall::getX() // точка вызова функции
+int Ball::getX() // точка вызова функции
 {
     return x;
 }
-inline int cBall::getY() // точка вызова функции
+int Ball::getY() // точка вызова функции
 {
     return y;
 }
-inline eDir cBall::getDirection() // точка вызова направленмя
+eDir Ball::getDirection() // точка вызова направленмя
 {
     return direction;
 }
-void cBall::Move() // движения
+void Ball::Move() // движения управления
 {
     switch (direction)
     {
